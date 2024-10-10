@@ -1,0 +1,22 @@
+.teams{
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+}
+.box1{
+    flex: 1;
+    border: 2px solid #000;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgb(6, 79, 79);
+    position: relative;
+}
+.box1 h1{
+    color: white;
+}
+.box1 ul{
+    color: white;
+    font-size: 30px;
+    text-align: left;
+}

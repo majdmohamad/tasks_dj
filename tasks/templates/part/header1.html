@@ -1,0 +1,23 @@
+{% load static %}
+    <link rel="stylesheet" href="{% static 'css/header.css'%}">
+    <script src="{% static 'js/header.js'%}"></script>
+<body>
+    <div class="header-area">
+        <div class="logo">Task Mangment</div>
+        <div class="link-container">
+            <ul class="link">
+                <li><a class="{% if current_page == 'home_page' %}active{% endif %} "href="{% url 'home_page' %}">Home</a></li>
+                <li><a class="{% if current_page == 'task_list' %}active{% endif %}" href="{% url 'task_list' %}">Tasks</a></li>
+                <li><a class="{% if current_page == 'register' %}active{% endif %}" href="{% url 'register' %}">Register</a></li>
+                <li><a class="{% if current_page == 'logout' %}active{% endif %}" href="{% url 'logout' %}">Logout</a></li>
+                <li><a class="{% if current_page == 'login' %}active{% endif %}" href="{% url 'login' %}">Login</a></li>
+            </ul>
+        <button class="toggle-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        </div>
+    </div>
+
+</body>

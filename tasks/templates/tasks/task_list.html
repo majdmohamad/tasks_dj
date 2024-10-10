@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block list %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/list.css'%}">
+<body>
+    <div class="list">
+        {% for task in tasks %}
+            <div class="list1">
+            <h1>{{task.title}}</h1>
+            <ul>
+                <li><strong>Description: </strong>{{task.description}}</li>
+                <li>Assigned_to: {{task.assigned_to}}</li>
+                <li>Team: {{task.team}}</li>
+                <li>Status: {{task.status}}</li>
+                <li>Date: {{task.due_date}}</li>
+            </ul>
+            <span><a href="{% url 'detail' task.id %}">details</a></span>
+            </div>
+        {%endfor%}
+    </div>
+</body>
+{% endblock list %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block create_team %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'css/create_team.css'%}">
+<body>
+    <div class="create_team">
+        <form method="POST">
+            <h1>Create Team</h1>
+            <hr>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Create Team</button>
+        </form>
+    </div>
+</body>
+{% endblock create_team %}

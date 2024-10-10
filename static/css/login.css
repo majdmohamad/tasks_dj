@@ -1,0 +1,43 @@
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 87%;
+    width: 100%;
+}
+form{
+    background-color: rgb(6, 79, 79);
+    padding: 50px;
+    color: white;
+    font-size: 20px;
+    text-align:left;
+    border: 2px solid #000;
+}
+form h1{
+    text-align: center;
+    margin-bottom: 42px;
+    margin-top: -41px
+}
+hr{
+    margin-bottom: 42px;
+    margin-top: -41px
+}
+button{
+    width: 200px;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: rgb(51, 8, 91);
+    color: white;
+    cursor: pointer;
+}
+p a{
+    background-color: rgb(51, 8, 91);
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+}

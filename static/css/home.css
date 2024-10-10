@@ -1,0 +1,87 @@
+.title{
+    width: 100%;
+}
+.title h1{
+    text-align: center;
+    background-color: rgb(6, 79, 79);
+    padding: 10px;
+    border: 2px solid black;
+    color: white;
+}
+.home{
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+.box{
+    flex: 1;
+    border: 2px solid #000;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgb(6, 79, 79);
+    position: relative;
+
+}
+.box h1{
+    color: white;
+}
+.box p{
+    color: white;
+    font-size: 30px;
+    text-align: left;
+}
+.box ul{
+    color: white;
+    font-size: 30px;
+    text-align: left;
+}
+.box span {
+    position: absolute;
+    bottom: 15px;
+    right: 5px;
+}
+.box span a{
+    background-color: rgb(51, 8, 91);
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 23px;
+    text-decoration: none;
+    color: white;
+}
+.teams{
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+}
+.box1{
+    flex: 1;
+    border: 2px solid #000;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgb(6, 79, 79);
+    position: relative;
+}
+.box1 h1,
+.box1 p{
+    color: white;
+}
+.box1 ul{
+    color: white;
+    font-size: 30px;
+    text-align: left;
+}
+.box1 a{
+    background-color: rgb(51, 8, 91);
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 23px;
+    text-decoration: none;
+    color: white;
+}

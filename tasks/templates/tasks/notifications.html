@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block note %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/note.css'%}">
+<body>
+    <div class="teams">
+        <div class="box1">
+            <h1>Your Notifications</h1>
+            <ul>
+                {% if notifications %}
+                {% for notification in notifications %}
+                <li>{{notification.message}}</li>
+                {% endfor %}
+                {% else %}
+                <p>You dont have notification</p>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</body>
+{% endblock note %}

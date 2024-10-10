@@ -1,0 +1,91 @@
+.header-area {
+    position: relative;
+    z-index: 2;
+    color: rgb(6, 79, 79);
+    display: flex;
+    padding: 10px;
+}
+.header-area .logo {
+    width: 300px;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 25px;
+}
+.header-area .link-container{
+    width: 100%;
+    text-align: right;
+}
+.header-area .link {
+    list-style: none;
+    padding-left: 0;
+}
+.header-area .link li {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.header-area .link li a{
+    color: rgb(6, 79, 79);
+    text-decoration: none;
+}
+.header-area .link .active{
+    color: blue;
+}
+.header-area .link li a:hover{
+    color: var(--main-color) ;
+}
+.header-area .toggle-menu{
+    background: none;
+    border: none;
+    width: 40px;
+    cursor: pointer;
+    margin-top: 15px;
+    display: none;
+    position: relative;
+}
+.header-area .toggle-menu.menu-active:before{
+    content: '';
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent rgb(6, 79, 79) transparent;
+    position: absolute;
+    bottom: -20px;
+    left: 10px;
+}
+.header-area .toggle-menu:focus{
+    outline: none;
+}
+.header-area .toggle-menu span{
+    display: block;
+    background-color: rgb(6, 79, 79);
+    height: 3px;
+    margin-bottom: 4px;
+}
+
+@media(max-width: 991px){
+    .header-area .link{
+        display: none;
+    }
+    .header-area .link.open{
+        background-color: rgb(6, 79, 79);
+        padding: 20px;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50px;
+        width: 100%;
+        border-radius: 4px;
+        text-align: left;
+    }
+    .header-area .link.open li{
+        display: block;
+        margin: 10px;
+    }
+    .header-area .link.open li a{
+        color: white;
+        font-weight: bold;
+    }
+    .header-area .toggle-menu{
+        display: inline-block;
+    }
+}

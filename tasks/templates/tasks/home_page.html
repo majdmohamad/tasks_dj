@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block home %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css'%}">
+
+<body>
+    {% if user.username  %}
+    <div class="title">
+        <h1>Wellcom {{user.username}}</h1>
+    </div>
+    {% endif %}
+    <div class="home">
+        <div class="box">
+            <h1>Create Task</h1>
+            <p>Here you can create tasks for your team and you can give details about them such as:</p>
+            <ul>
+                <li>Title</li>
+                <li>Description</li>
+                <li>Team</li>
+                <li>Status</li>
+                <li>Date</li>
+            </ul>
+            <span><a href="{% url 'create_task' %}">Create a task now</a></span>
+        </div>
+        <div class="box">
+            <h1>Create Team</h1>
+            <p>Here you can create your team for and you can give details about it such as:</p>
+            <ul>
+                <li>Name</li>
+                <li>Description</li>
+                <li>Members</li>
+            </ul>
+            <span><a href="{% url 'create_team' %}">Create a team now</a></span>
+        </div>
+    </div>
+    <div class="teams">
+        <div class="box1">
+            <h1>Your Notifications</h1>
+            <span><a href="{% url 'notifications' %}">Notifications</a></span>
+            <p> you must log in first</p>
+        </div>
+        <div class="box1">
+            <h1>Team Performance</h1>
+            {%if user.username %}
+            <ul>
+                {% for member,completed_tasks in members_performance.items %}
+                <li>{{member}}: {{completed_tasks}} tasks completed</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+    
+</body>
+{% endblock home %}
